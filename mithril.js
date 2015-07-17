@@ -1,4 +1,5 @@
 var m = (function app(window, undefined) {
+  var VERSION = "0.2.0-next"
 	var OBJECT = "[object Object]", ARRAY = "[object Array]", STRING = "[object String]", FUNCTION = "function";
 	var type = {}.toString;
 	var parser = /(?:(^|#|\.)([^#\.\[\]]+))|(\[.+?\])/g, attrParser = /\[(.+?)(?:=("|'|)(.*?)\2)?\]/;
@@ -18,6 +19,9 @@ var m = (function app(window, undefined) {
 
 	initialize(window);
 
+  m.version = function() {
+    return VERSION;
+  };
 
 	/**
 	 * @typedef {String} Tag
